@@ -14,7 +14,6 @@
     "case-sensitive-paths-webpack-plugin": "2.1.1",
     "chalk": "1.1.3",
     "css-loader": "0.28.7",
-    "cypress": "4.5.0",
     "dotenv": "4.0.0",
     "dotenv-expand": "4.2.0",
     "eslint": "4.10.0",
@@ -54,7 +53,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "start-server-and-test start http-get://localhost:3030 cy:run"
+   
   },
   "jest": {
     "collectCoverageFrom": [
@@ -97,5 +97,8 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "cypress": "^4.5.0"
   }
 }
