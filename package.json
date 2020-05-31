@@ -54,7 +54,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "npm start http-get://localhost:3030 cy:run",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run --env host=api.dev.local,port=3000"
   },
   "jest": {
     "collectCoverageFrom": [
